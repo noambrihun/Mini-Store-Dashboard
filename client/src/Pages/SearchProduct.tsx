@@ -1,7 +1,9 @@
-import { useState ,useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import type { Product } from '../types/products';
+
 function SearchProduct() {
-    const[search, setSearch] = useState('');
-    const[products, setProducts] = useState([]);
+    const [search, setSearch] = useState('');
+    const [products, setProducts] = useState<Product[]>([]);
     useEffect(() => {
         if(search === "") {
             setProducts([])
